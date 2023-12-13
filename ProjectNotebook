@@ -1,0 +1,189 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "863e814f",
+   "metadata": {},
+   "source": [
+    "# Project Description"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7255868a",
+   "metadata": {},
+   "source": [
+    "## Guess the Taylor Swift Song! 🎤🎵✨\n",
+    ">*Love's a game, wanna play?*<br>\n",
+    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- \"Blank Space\"<br>\n",
+    "\n",
+    "How big of a *Swiftie* are **YOU?** Play this simple quiz to test your knowledge on Taylor Swift's discrography! <br>\n",
+    "\n",
+    "This text-input game serves as an entertaining way to test the player's knowledge on Swift's songs based on a given lyric taken from a random song on the Eras Tour setlist. ***Can you guess them all?*** 💫"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0d885b2c",
+   "metadata": {},
+   "source": [
+    "### The Process"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e15b77d6",
+   "metadata": {},
+   "source": [
+    "As a fan of Taylor Swift's music, I decided to challenge myself to create a lyric quiz game for my Final Project. I incorporated basic chatbot functions from Assignment 3, as well as newer topics from lecture, such as pandas. I started my project by brainstorming basic components of a quiz game that I wanted to include, such as randomly generating lyrics and initializing a score counter. I found a CSV file of the Eras Tour Setlist (with lyrics) I found on Kaggle (link below), reformatting and uploading individual files for 24 songs. Then, I coded the main functions and classes of the game using knowledge I acquired from the course. <br>\n",
+    "<br>\n",
+    "Ultimately, it was a challenging yet fulfilling process to develop my own game based on my love for Taylor Swift's music!✨🎶\n",
+    "<br>\n",
+    "Kaggle link: https://www.kaggle.com/datasets/amouschocolovski/taylor-swift-era-tour-dataset"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f95096d5",
+   "metadata": {},
+   "source": [
+    "## How to Play"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b354880b",
+   "metadata": {},
+   "source": [
+    "The goal of the game is to correctly guess the Taylor Swift song on the Eras Tour Setlist from a randomly generated lyric. <br>\n",
+    "Here are some important things to keep in mind:\n",
+    "- Inputs are case-insensitive. Avoid punctuation or special characters when answering.\n",
+    "- The player will earn 1 point for each correct answer.\n",
+    "- The player is given one attempt to guess the song correctly.\n",
+    "- There will be a total of 7 questions/rounds.\n",
+    "- At the end, the player will be placed in 4 categories based on their cumulative score:\n",
+    "  - 0-2 pts: Newbie 🥸\n",
+    "  - 3-5 pts: Casual Fan 🤓\n",
+    "  - 6-7 pts: Swiftie 💋\n",
+    "- Player has the choice to generate a tiny playlist at the end of the quiz.\n",
+    "- Last, but not least, have fun! 💖"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3a059454",
+   "metadata": {},
+   "source": [
+    "## Project Code\n",
+    ">*Let the games begin*<br>\n",
+    "&nbsp;&nbsp;*Are you ready for it?*<br>\n",
+    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- \"...Ready For It?\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "86c03f2e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Welcome to 'Guess the Taylor Swift Song'!\n",
+      "Make sure to read all of the instructions above.\n",
+      "\n",
+      "Let's get to know each other!\n",
+      "What is your name?: k\n",
+      "\n",
+      "So, you think you have what it takes to be a \n",
+      "Swiftie, huh k? It's time to put that to the test!\n",
+      "Let the games begin.\n",
+      "--------------------------------------------------\n"
+     ]
+    },
+    {
+     "ename": "NameError",
+     "evalue": "name 'SongLyrics' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[0;32m/tmp/ipykernel_140/3962409.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mplay_quiz\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m~/Final-Project/my_script.py\u001b[0m in \u001b[0;36mplay_quiz\u001b[0;34m()\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     12\u001b[0m     \u001b[0mscore\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mguess_lyric\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 13\u001b[0;31m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     14\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'--------------------------------------------------'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m~/Final-Project/my_module/functions.py\u001b[0m in \u001b[0;36mguess_lyric\u001b[0;34m()\u001b[0m\n\u001b[1;32m     44\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     45\u001b[0m     \u001b[0;32mfor\u001b[0m \u001b[0mquestion\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mrange\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m8\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;31m# Loops 7 times.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 46\u001b[0;31m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     47\u001b[0m         \u001b[0mlyric\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mSongLyrics\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     48\u001b[0m         \u001b[0mprint_lyric\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mlyric\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_lyrics\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'SongLyrics' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "play_quiz()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "4bfc9d5d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\u001b[1m============================= test session starts ==============================\u001b[0m\n",
+      "platform linux -- Python 3.9.5, pytest-7.4.2, pluggy-1.3.0\n",
+      "rootdir: /home/l2dinh/Final-Project\n",
+      "plugins: anyio-3.2.1\n",
+      "collected 7 items                                                              \u001b[0m\n",
+      "\n",
+      "my_module/test_functions.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                      [100%]\u001b[0m\n",
+      "\n",
+      "\u001b[32m============================== \u001b[32m\u001b[1m7 passed\u001b[0m\u001b[32m in 0.49s\u001b[0m\u001b[32m ===============================\u001b[0m\n"
+     ]
+    }
+   ],
+   "source": [
+    "!pytest"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8ed81b28",
+   "metadata": {},
+   "source": [
+    "## Extra Credit"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "21a4fbcb",
+   "metadata": {},
+   "source": [
+    "1) I have no background in programming or Python before this course.<br>\n",
+    "2) I went beyond while creating this quiz game as I challenged myself with diving deeping into dataframes and CSV files. In the first place, I had to individually create each CSV song file and clean up the lyrics for each, which took time and effort to go through and make sure they are correct and working. Through using knowledge from the course with our Lecture on pandas and online research, I had to learn how I would be able to access a a random CSV file and link it with its filename through new codes/methods like Path, '.stem', and listing the directory through os.listdir() method. During the lecture, this was the one that I struggled with the most and I'm glad I was able to push myself to learn more about file paths. I also learned other neat hacks, such as expanding the dataframe display so that the full lyrics would show up in the cell with a set_option. "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
